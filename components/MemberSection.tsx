@@ -122,47 +122,6 @@ export default function MemberSection() {
           </div>
         </motion.div>
 
-        {/* 會員等級圖 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-20"
-        >
-          <h3 className="text-2xl text-dark-gray font-cormorant font-light text-center mb-8">
-            會員等級介紹
-          </h3>
-          <div className="relative w-full">
-            <Image
-              src="/images/04-process-flows/01-member-signup/02-member-level.png"
-              alt="From-in 會員等級"
-              width={1200}
-              height={400}
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </motion.div>
-
-        {/* 會員優惠說明 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-12"
-        >
-          <h3 className="text-2xl text-dark-gray font-cormorant font-light text-center mb-8">
-            會員專享優惠
-          </h3>
-          <div className="relative w-full">
-            <Image
-              src="/images/04-process-flows/01-member-signup/03-member-benefits.png"
-              alt="From-in 會員優惠"
-              width={1200}
-              height={400}
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </motion.div>
 
         {/* 最後 CTA */}
         <motion.div
