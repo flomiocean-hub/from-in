@@ -1,9 +1,67 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function FAQSection() {
+  useEffect(() => {
+    // 加入 FAQ Schema Markup
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "玻尿酸真的可以喝嗎？有效嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的，玻尿酸可以喝。From-in 使用的是通過國際認証的玻尿酸成份（分子量小於10kDa），經臨床驗證能有效被人體吸收。定期飲用能改善肌膚保濕狀況，讓肌膚更飽滿、更有光澤。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "幾歲適合開始喝？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "18 歲以上都適合喝。特別推薦給：經常熬夜、對著螢幕工作的人；常吹冷氣、日曬者；追求肌膚飽水度的年輕上班族；以及想維持肌膚彈性的成熟肌膚人士。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一天要喝幾包？多久會有感？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "建議每天喝 1–2 包（早晚各一包）。大多數使用者在 2–4 週內能感受到肌膚飽水度提升，4–8 週後效果更明顯（因人而異）。持續飲用效果更佳。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以和其他保養品一起使用嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。From-in 是內服玻尿酸飲品，與外用保養品互補。建議配合日常保濕乳液、精華液一起使用，由內而外雙重補水效果更好。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "有任何副作用或禁忌嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From-in 採用純淨配方，無香料、無色素、無防腐劑。一般無副作用，但如果對玻尿酸或任何成分過敏，建議先諮詢醫生。孕婦及哺乳期間建議先詢問醫師。"
+          }
+        }
+      ]
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   const faqs = [
