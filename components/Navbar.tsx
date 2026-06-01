@@ -70,14 +70,12 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault()
-            document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' })
-          }}
-          className="px-5 py-2 bg-rose-gold text-cream hover:bg-rose-gold/90 transition-all duration-300 text-sm font-semibold"
+          href="https://line.me/R/ti/p/from-in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 border border-rose-gold text-rose-gold hover:bg-rose-gold hover:text-cream transition-all duration-300 text-sm"
         >
-          立即訂購
+          加入 LINE
         </a>
       </div>
     </nav>
