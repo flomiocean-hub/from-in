@@ -59,23 +59,17 @@ export default function Navbar() {
               成分知識
             </a>
           </li>
-          <li>
-            <a
-              href="#contact"
-              className="hover:text-dark-gray transition-colors duration-300"
-            >
-              聯絡我們
-            </a>
-          </li>
         </ul>
 
         <a
-          href="https://line.me/R/ti/p/from-in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-5 py-2 border border-rose-gold text-rose-gold hover:bg-rose-gold hover:text-cream transition-all duration-300 text-sm"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault()
+            document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' })
+          }}
+          className="px-5 py-2 bg-rose-gold text-cream hover:bg-rose-gold/90 transition-all duration-300 text-sm font-semibold"
         >
-          加入 LINE
+          立即訂購
         </a>
       </div>
     </nav>

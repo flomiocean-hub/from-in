@@ -3,8 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import BrandBeliefSection from "@/components/BrandBeliefSection";
 import ProductSection from "@/components/ProductSection";
 import IngredientsSection from "@/components/IngredientsSection";
-import MemberSection from "@/components/MemberSection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,8 +14,6 @@ export default function Home() {
         <BrandBeliefSection />
         <ProductSection />
         <IngredientsSection />
-        <MemberSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
