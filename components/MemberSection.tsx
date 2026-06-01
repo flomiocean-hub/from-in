@@ -1,90 +1,186 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function MemberSection() {
   const steps = [
     {
       num: '①',
-      title: '免費註冊',
-      reward: '100 購物金',
-      desc: '成為會員，立即領取',
+      title: '加入 LINE 好友',
+      desc: '取得專屬優惠碼',
     },
     {
       num: '②',
-      title: '新會員禮',
-      reward: '加 $1 多一盒',
-      desc: '首次購買享超優惠',
+      title: '首次下單',
+      desc: '折抵 100 購物金，$1 加購第二盒',
     },
     {
       num: '③',
-      title: '推薦好友',
-      reward: '再賺 100 購物金',
-      desc: '分享的同時也能獲利',
+      title: '分享推薦',
+      desc: '每成功一次再賺 100 購物金',
     },
   ]
 
   return (
     <section id="member" className="py-20 md:py-32 bg-light-rice">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Hero 區塊 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="grid md:grid-cols-2 gap-12 items-center mb-20"
         >
-          <h2 className="heading-lg text-dark-gray font-cormorant font-light mb-4">
-            加入就有，不用等
-          </h2>
-          <p className="text-lg text-mid-gray font-noto-serif-tc">
-            三步驟打造你的會員權益
-          </p>
+          <div className="space-y-6">
+            <h2 className="heading-lg text-dark-gray font-cormorant font-light">
+              加入 LINE，立即拿新會員禮
+            </h2>
+            <p className="text-lg text-mid-gray font-noto-serif-tc">
+              免費加入，第一次下單就有三重優惠
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a
+                href="https://line.me/R/ti/p/from-in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button-primary inline-flex justify-center"
+              >
+                加入 LINE 官方帳號
+              </a>
+              <a
+                href="https://from-in.com.tw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border border-dark-gray text-dark-gray hover:bg-dark-gray hover:text-cream transition-all duration-300 inline-flex items-center justify-center"
+              >
+                直接購買 →
+              </a>
+            </div>
+
+            <p className="text-xs text-mid-gray pt-4 font-noto-serif-tc">
+              ⏰ 加入後會立即收到優惠碼，馬上就能使用
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative aspect-square max-w-md mx-auto">
+              <Image
+                src="/images/04-process-flows/04-three-good-perks/01-three-perks-poster.jpg"
+                alt="From-in 新會員三好禮"
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </motion.div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="p-6 bg-cream rounded-lg border border-border-light hover:border-rose-gold transition-colors duration-300"
-            >
-              <div className="flex items-start gap-4 mb-4">
-                <span className="text-4xl text-rose-gold font-cormorant font-light">
-                  {step.num}
-                </span>
-                <div className="flex-1">
-                  <h3 className="text-lg text-dark-gray font-semibold font-noto-serif-tc">
-                    {step.title}
-                  </h3>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <p className="text-rose-gold font-semibold text-sm font-noto-serif-tc">
-                  {step.reward}
-                </p>
-                <p className="text-mid-gray text-sm font-noto-serif-tc">
-                  {step.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
+        {/* 三步驟流程 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center"
+          transition={{ duration: 0.8 }}
+          className="mb-20"
         >
+          <h3 className="text-2xl text-dark-gray font-cormorant font-light text-center mb-12">
+            簡單三步驟，享受會員好康
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-6 md:gap-4">
+            {steps.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="bg-cream p-6 md:p-8 rounded-lg border border-border-light hover:border-rose-gold transition-colors duration-300">
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="text-5xl text-rose-gold font-cormorant font-light flex-shrink-0">
+                      {step.num}
+                    </span>
+                    <div className="flex-1">
+                      <h4 className="text-lg text-dark-gray font-semibold font-noto-serif-tc mb-1">
+                        {step.title}
+                      </h4>
+                      <p className="text-mid-gray text-sm font-noto-serif-tc">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 箭頭 */}
+                {index < steps.length - 1 && (
+                  <div className="hidden md:flex absolute -right-3 top-1/2 transform -translate-y-1/2 z-10">
+                    <span className="text-3xl text-rose-gold">→</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* 會員等級圖 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <h3 className="text-2xl text-dark-gray font-cormorant font-light text-center mb-8">
+            會員等級介紹
+          </h3>
+          <div className="relative w-full">
+            <Image
+              src="/images/04-process-flows/01-member-signup/02-member-level.png"
+              alt="From-in 會員等級"
+              width={1200}
+              height={400}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </motion.div>
+
+        {/* 會員優惠說明 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <h3 className="text-2xl text-dark-gray font-cormorant font-light text-center mb-8">
+            會員專享優惠
+          </h3>
+          <div className="relative w-full">
+            <Image
+              src="/images/04-process-flows/01-member-signup/03-member-benefits.png"
+              alt="From-in 會員優惠"
+              width={1200}
+              height={400}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </motion.div>
+
+        {/* 最後 CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center pt-8"
+        >
+          <p className="text-mid-gray text-sm mb-6 font-noto-serif-tc">
+            還在猶豫嗎？加入 From-in 會員，享受獨家優惠與專屬好康
+          </p>
           <a
-            href="https://from-in.com.tw/member"
+            href="https://line.me/R/ti/p/from-in"
             target="_blank"
             rel="noopener noreferrer"
-            className="button-primary"
+            className="button-primary inline-flex"
           >
-            立即加入會員
+            立即加入 LINE 官方帳號
           </a>
         </motion.div>
       </div>

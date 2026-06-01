@@ -120,10 +120,24 @@ export default function Footer() {
             </h3>
             <div className="space-y-2">
               <p className="text-cream/70 text-sm font-noto-serif-tc">
-                📧 info@from-in.com.tw
+                📧{' '}
+                <a
+                  href="mailto:info@from-in.com.tw"
+                  className="text-cream hover:text-rose-gold transition-colors duration-300 underline"
+                >
+                  info@from-in.com.tw
+                </a>
               </p>
               <p className="text-cream/70 text-sm font-noto-serif-tc">
-                💬 LINE: @from-in
+                💬{' '}
+                <a
+                  href="https://line.me/ti/p/~from-in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream hover:text-rose-gold transition-colors duration-300 underline"
+                >
+                  LINE: @from-in
+                </a>
               </p>
             </div>
           </div>

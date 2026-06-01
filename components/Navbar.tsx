@@ -1,18 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function Navbar() {
   const [isScrolling, setIsScrolling] = useState(false)
 
-  const handleScroll = () => {
-    setIsScrolling(window.scrollY > 50)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(window.scrollY > 50)
+    }
 
-  if (typeof window !== 'undefined') {
     window.addEventListener('scroll', handleScroll)
-  }
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <nav
