@@ -88,15 +88,15 @@ export default function ProductSection() {
               <p className="text-3xl text-dark-gray font-cormorant font-light">
                 NT$1,790 起
               </p>
-              <a
-                href="https://from-in.com.tw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-primary inline-flex"
+              <button
+                onClick={() => {
+                  document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="button-primary inline-flex cursor-pointer"
               >
-                前往購買
+                直接購買
                 <span className="ml-2">→</span>
-              </a>
+              </button>
             </div>
 
             <div className="bg-cream p-6 rounded-lg border border-border-light">
