@@ -8,10 +8,9 @@ export default function ProductSection() {
   const [activeSlide, setActiveSlide] = useState(0)
 
   const productImages = [
-    '/images/02-product-images/05-product-detail-1.jpg',
-    '/images/02-product-images/05-product-detail-2.jpg',
-    '/images/02-product-images/05-product-detail-3.jpg',
-    '/images/02-product-images/05-product-detail-4.jpg',
+    '/images/02-product-images/01-product-main-original.jpg',
+    '/images/02-product-images/03-product-angle2.jpg',
+    '/images/02-product-images/04-product-angle2-hires.jpg',
   ]
 
   const benefits = [
