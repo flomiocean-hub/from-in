@@ -59,6 +59,14 @@ export default function Navbar() {
               成分知識
             </a>
           </li>
+          <li>
+            <a
+              href="#faq"
+              className="hover:text-dark-gray transition-colors duration-300"
+            >
+              常見問題
+            </a>
+          </li>
         </ul>
 
         <a
