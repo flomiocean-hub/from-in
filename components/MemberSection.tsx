@@ -49,14 +49,14 @@ export default function MemberSection() {
               >
                 加入 LINE 官方帳號
               </a>
-              <a
-                href="https://from-in.com.tw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-dark-gray text-dark-gray hover:bg-dark-gray hover:text-cream transition-all duration-300 inline-flex items-center justify-center"
+              <button
+                onClick={() => {
+                  document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="px-6 py-3 border border-dark-gray text-dark-gray hover:bg-dark-gray hover:text-cream transition-all duration-300 inline-flex items-center justify-center cursor-pointer"
               >
                 直接購買 →
-              </a>
+              </button>
             </div>
 
             <p className="text-xs text-mid-gray pt-4 font-noto-serif-tc">
@@ -121,7 +121,6 @@ export default function MemberSection() {
             ))}
           </div>
         </motion.div>
-
 
         {/* 最後 CTA */}
         <motion.div
