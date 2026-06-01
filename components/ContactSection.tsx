@@ -50,7 +50,7 @@ export default function ContactSection() {
               LINE ID: @from-in
             </p>
             <a
-              href="https://line.me/R/ti/p/from-in"
+              href="https://line.me/R/ti/p/@993jpeqq"
               target="_blank"
               rel="noopener noreferrer"
               className="button-primary inline-flex"
@@ -83,7 +83,7 @@ export default function ContactSection() {
                   💬 LINE 官方帳號
                 </p>
                 <a
-                  href="https://line.me/R/ti/p/from-in"
+                  href="https://line.me/R/ti/p/@993jpeqq"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-dark-gray hover:text-rose-gold transition-colors duration-300 font-semibold font-noto-serif-tc underline"
@@ -184,7 +184,7 @@ export default function ContactSection() {
               還有其他問題嗎？
             </p>
             <a
-              href="https://line.me/R/ti/p/from-in"
+              href="https://line.me/R/ti/p/@993jpeqq"
               target="_blank"
               rel="noopener noreferrer"
               className="text-rose-gold hover:text-dark-gray transition-colors duration-300 font-semibold underline"

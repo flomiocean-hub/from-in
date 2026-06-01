@@ -70,7 +70,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="https://line.me/R/ti/p/from-in"
+          href="https://line.me/R/ti/p/@993jpeqq"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 border border-rose-gold text-rose-gold hover:bg-rose-gold hover:text-cream transition-all duration-300 text-sm"

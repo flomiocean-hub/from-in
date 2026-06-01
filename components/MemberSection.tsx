@@ -42,7 +42,7 @@ export default function MemberSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href="https://line.me/R/ti/p/from-in"
+                href="https://line.me/R/ti/p/@993jpeqq"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-primary inline-flex justify-center"
@@ -133,7 +133,7 @@ export default function MemberSection() {
             還在猶豫嗎？加入 From-in 會員，享受獨家優惠與專屬好康
           </p>
           <a
-            href="https://line.me/R/ti/p/from-in"
+            href="https://line.me/R/ti/p/@993jpeqq"
             target="_blank"
             rel="noopener noreferrer"
             className="button-primary inline-flex"
