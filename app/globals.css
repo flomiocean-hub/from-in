@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #FAF9F7;
+  --dark-gray: #1C1C1A;
+  --mid-gray: #6B6B6B;
+  --rose-gold: #C9956A;
+  --light-rice: #F0EAE0;
+  --border-light: #E5E0D8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-gray);
+  font-family: var(--font-noto-serif-tc), 'Noto Serif TC', serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.heading-display {
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.heading-xl {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.heading-lg {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+.body-text {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.button-reset {
+  @apply border-none bg-transparent cursor-pointer transition-all duration-300;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 border text-sm transition-all duration-300;
+  border-color: var(--rose-gold);
+  color: var(--rose-gold);
+}
+
+.button-primary:hover {
+  background-color: var(--rose-gold);
+  color: var(--cream);
 }
